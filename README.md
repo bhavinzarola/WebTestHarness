@@ -27,7 +27,9 @@ BrowserSelector: BrowserSelector extends Utils to use the properties of BasePage
 
 Loadproperties: This class has the logic to assign test data and browser names by creating a TestDataConfig.properties file for the test to fetch the data from this file run test in relevant browser and use data assigned in relevant variables. You will find a path defined in this class. This is the path to TestDataConfig.properties file.
 
-PageObjects Package: This interface has Java .java files for every page user navigates to. These .java files have names relevant to the pages user is on and contains locators and methods for the user to perform some action. This will avoid duplication of code and the code will be easy to maintain and refactor as whenever there is any change to a feature on the page we change it in one place. It saves a lot of time and effort and also it is more readable for someone else reading the code. .java files in Page object extends Utils to use the properties of Utils and BasePage
+PageObjects Package: This interface has Java .java files for every page user navigates to. These .java files have names relevant to the pages user is on and contains locators and methods for the user to perform some action.This is the use of JAVA Single repository principle. This will avoid duplication of code and the code will be easy to maintain and refactor as whenever there is any change to a feature on the page we change it in one place. It saves a lot of time and effort and also it is more readable for someone else reading the code. .java files in Page object extends Utils to use the properties of Utils and BasePage
+
+In this page object I have use inheritance OOP's concept to use the property of utils class in child class , another word if in future requirement changes and some more web pages needs to add we can simpley use extend key word and utilise the existing property of page. This way we can use the Open close principle as Open for extension but Close for modification so we dont need to amend the existing code.
 
 The Test/Java section consists of 3 Java classes and a Directory
 
